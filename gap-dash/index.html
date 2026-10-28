@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#faf7ee">
+<title>Gap Dash • Zip's crossing record</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<header><a class="brand" href="./" aria-label="Gap Dash home">GAP DASH<span>ZIP'S EXPRESS ROUTE</span></a><span class="badge">ONE TAP. ALL TIMING.</span></header>
+<section class="game" aria-label="Gap Dash game">
+<canvas id="canvas" width="400" height="680" aria-label="Zip waits on a wall. Tap or press Space to cross the moving gate."></canvas>
+<div class="hud"><div class="best">BEST <span id="best">0</span></div><div class="score"><span id="score">0</span><small>CROSSINGS</small></div><button id="pause" aria-label="Pause game" title="Pause (P)">Ⅱ</button></div>
+<div id="overlay" class="overlay" hidden><div class="card"><span id="eyebrow">ROUTE PAUSED</span><h1 id="title">Take a breather.</h1><p id="message">Zip will wait right here.</p><button id="action">Resume route <span>→</span></button></div></div>
+<div class="hint" id="hint"><strong>Tap to cross <span>→</span></strong><span>Watch the gap. Pick your moment.</span></div>
+</section>
+<footer><span class="status"><i></i> NO RUSH. JUST TIMING.</span><span>Tap / click / Space</span></footer>
+</main>
+<p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+<script type="module" src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import { WORLD as W, gateSpeed, gapCenter, hitsGate } from '../rules.js';
+assert.equal(gapCenter(0),W.y);
+assert.equal(hitsGate(200,W.y),false,'centered gap clears Zip');
+assert.equal(hitsGate(200,W.y+W.gap/2-W.radius),true,'touching edge collides');
+assert.equal(hitsGate(200,W.y+W.gap/2-W.radius-.1),false,'small clearance remains safe');
+assert.equal(hitsGate(W.left,W.y+128),false,'waiting on a wall is always safe');
+assert.equal(hitsGate(200+14+13,W.y+100),true,'front edge cannot tunnel through gate');
+assert.equal(hitsGate(200+14+13.1,W.y+100),false);
+assert.equal(gateSpeed(30),gateSpeed(300),'difficulty is capped');
+assert.ok(gateSpeed(10)>gateSpeed(0));
+console.log('9 rule checks passed');

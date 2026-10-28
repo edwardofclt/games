@@ -1,0 +1,30 @@
+Wobble Stack — beta 1.0 (2)
+
+UPDATE: Corrected the app icon. Gameplay is unchanged.
+
+WHAT TO TEST
+Tap to drop the sliding jelly block. Each settled block adds a point. Aim carefully:
+overhanging blocks and weight above a lower joint can topple the tower.
+
+Please try:
+• Touch timing, especially on smaller iPhones and larger iPads.
+• Dropping blocks near both edges and balancing a crooked tower.
+• Pause / resume, leaving and returning to the app, and rotating the device.
+• Best-score persistence after closing and reopening the app.
+• Retry after a miss or collapse.
+
+The game runs offline with no login, advertising, purchases, or analytics.
+
+BETA REVIEW NOTES
+This is a complete single-mechanic arcade game. All gameplay assets and code are
+bundled in the app. It requires no account, demo credentials, backend, or internet
+connection. No in-app purchases or external links appear in the game. Tap anywhere
+on the playfield to drop a block. Tap II to pause, and Keep stacking to resume.
+A failed run offers Stack again. The best score is stored locally on the device.
+
+KNOWN BETA LIMITS
+Silent gameplay. Scores do not sync between devices. A run is paused when the app
+is inactive but is not restored after the operating system terminates the process.
+The support model is an intentional center-of-mass approximation, not full physics.
+Physical device playtesting is still needed; touch and lifecycle tests have passed
+in both iPhone and iPad simulators.
