@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dawn Isle — rendered art review</title><link rel="icon" href="data:,"><style>
+*{box-sizing:border-box}body{margin:0;background:#e9e5d2;color:#263d36;font:14px ui-monospace,monospace}main{max-width:1096px;margin:auto;padding:30px 32px}header{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:22px}h1{font-size:21px;margin:0;letter-spacing:2px}header p{font-size:11px;margin:0;color:#657664}.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}figure{margin:0}canvas{display:block;width:100%;height:auto;image-rendering:pixelated;border:4px solid #263d36;box-shadow:0 0 0 2px #bcc3a2}figcaption{font-size:11px;font-weight:bold;letter-spacing:2px;margin-top:12px}footer{font-size:11px;margin-top:25px;color:#657664}a{color:inherit}@media(max-width:600px){.grid{grid-template-columns:1fr}main{padding:20px}header{display:block}header p{margin-top:10px}}
+</style></head><body><main><header><h1>DAWN ISLE</h1><p>ACTUAL GAME RENDERER · REVISED ART</p></header><section class="grid">
+<figure><canvas width="160" height="144" data-room="village"></canvas><figcaption>HEARTH VILLAGE</figcaption></figure>
+<figure><canvas width="160" height="144" data-room="greenway"></canvas><figcaption>FERNWAY</figcaption></figure>
+<figure><canvas width="160" height="144" data-room="treasure"></canvas><figcaption>WATCHTOWER TREASURE</figcaption></figure>
+<figure><canvas width="160" height="144" data-room="boss"></canvas><figcaption>WATCHTOWER GUARDIAN</figcaption></figure>
+</section><footer>Original pixel patterns, drawn by the playable game. <a href="../index.html">Play Dawn Isle →</a></footer></main>
+<script type="module">
+import {makeGame,enterRoom} from '../engine.mjs';import {render} from '../render.mjs';
+for(const canvas of document.querySelectorAll('canvas')){const g=makeGame();g.flags.blade=true;g.flags.trial=true;g.flags.boots=true;g.equipped='boots';enterRoom(g,canvas.dataset.room);g.player.face='down';g.time=2;
+ if(g.room==='village'){g.player.x=72;g.player.y=88;g.equipped='shield';}
+ if(g.room==='greenway'){g.player.x=56;g.player.y=72;}
+ if(g.room==='treasure'){g.player.x=88;g.player.y=72;}
+ if(g.room==='boss'){g.player.x=56;g.player.y=88;g.enemies.boss[0].phase='stunned';}
+ render(canvas.getContext('2d'),g);
+}
+</script></body></html>

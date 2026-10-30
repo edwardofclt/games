@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="theme-color" content="#233b39"><title>Dawn Isle — The First Watchfire</title>
+ <link rel="icon" href="data:,">
+ <link rel="stylesheet" href="./style.css"><script type="module" src="./main.mjs"></script>
+</head>
+<body>
+ <header><a href="../index.html" class="back">← Game studio</a><span class="brand">DAWN ISLE <small>THE FIRST WATCHFIRE</small></span><button id="pause" aria-label="Pause game">Ⅱ</button></header>
+ <main>
+  <div class="location"><span id="room">Hearth Village</span><span id="save-status">AUTOSAVE</span></div>
+  <div class="play-layout">
+   <div class="screen-stage"><div id="screen">
+    <canvas id="game" width="160" height="144" aria-label="Dawn Isle top-down adventure game"></canvas>
+    <div id="dialogue" hidden><p id="dialogue-text"></p><button id="next" aria-label="Advance dialogue">A ›</button></div>
+    <section id="modal" aria-label="Game menu">
+     <div class="emblem" aria-hidden="true">✦</div><span id="modal-kicker">CHAPTER ONE</span>
+     <h1 id="modal-title">Dawn Isle</h1><p id="modal-text">The watchfires have gone dark. An ancient blade has chosen you to bring them back.</p>
+     <button id="primary" class="primary">Begin journey</button><button id="secondary" hidden>Cancel</button>
+     <p id="modal-help">Move with the D-pad. A talks and swings your sword. B uses your item.</p>
+    </section>
+   </div></div>
+   <div id="dpad" aria-label="Movement controls">
+    <button data-control="up" class="up" aria-label="Move up">▲</button><button data-control="left" class="left" aria-label="Move left">◀</button>
+    <span class="dpad-center" aria-hidden="true">✦</span><button data-control="right" class="right" aria-label="Move right">▶</button><button data-control="down" class="down" aria-label="Move down">▼</button>
+   </div>
+   <div id="actions"><button id="equip" aria-label="Swap equipped item" disabled><span id="item-name">SHIELD</span><small>TAP TO SWAP</small></button>
+    <div class="action-pair"><label><button data-control="item" class="action b" aria-label="Use equipped item">B</button><span id="item-action">HOLD GUARD</span></label><label><button data-control="action" class="action a" aria-label="Sword or interact">A</button><span>SWORD / TALK</span></label></div>
+   </div>
+  </div>
+  <div class="quest"><span aria-hidden="true">◆</span><p id="objective">Speak to the keeper by the shrine</p></div>
+  <footer><span id="hint">WASD / arrows · J / Space: A · K: B · I: swap</span><button id="restart">Restart chapter</button></footer>
+ </main>
+</body></html>
