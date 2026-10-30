@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#141419"><title>Little Familiars · A little care, a lifelong friend</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%2381d5c5'/%3E%3Ctext x='7' y='29' font-size='29'%3E✦%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="./style.css"></head>
+<body>
+<svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></symbol>
+<symbol id="i-paw" viewBox="0 0 24 24"><ellipse cx="5" cy="8" rx="2" ry="3"/><ellipse cx="10" cy="5" rx="2" ry="3"/><ellipse cx="16" cy="5" rx="2" ry="3"/><ellipse cx="21" cy="10" rx="2" ry="3"/><path d="M5 18c0-3 4-8 7-8s7 5 7 8c0 5-5 1-7 1s-7 4-7-1Z"/></symbol>
+<symbol id="i-shop" viewBox="0 0 24 24"><path d="M3 9h18l-2-6H5L3 9Zm0 0v2a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0V9M4 14v7h16v-7M9 21v-6h6v6"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 3h14a2 2 0 0 1 2 2v16H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm0 14h16M8 7h8M8 11h5"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M20 5c-3-3-7-1-8 2-1-3-5-5-8-2-4 4 0 9 8 15 8-6 12-11 8-15Z"/></symbol>
+<symbol id="i-food" viewBox="0 0 24 24"><path d="M3 12h18l-2 8H5l-2-8Zm-1 0h20M6 8c-2-2 2-3 0-5m6 5c-2-2 2-3 0-5m6 5c-2-2 2-3 0-5"/></symbol>
+<symbol id="i-water" viewBox="0 0 24 24"><path d="M12 2S4 11 4 16a8 8 0 0 0 16 0c0-5-8-14-8-14Z"/><path d="M8 16a4 4 0 0 0 4 4"/></symbol>
+<symbol id="i-clean" viewBox="0 0 24 24"><path d="m15 3 1 3 3 1-3 1-1 3-1-3-3-1 3-1 1-3ZM6 10l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2Z"/><path d="m20 12-9 9a2 2 0 0 1-3 0l-5-5m15-6 4 4"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M4 8c6-2 8 1 8 4s3 6 8 4M8 20c-2-6 1-8 4-8s6-3 4-8"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 3 6 7 1-5 5 1 7-6-4-6 4 1-7-5-5 7-1 3-6Z"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+<symbol id="i-sound" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5V4Zm4 4a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M4 20 19 5M4 15C1 4 12 2 21 3c0 10-2 20-13 16"/></symbol>
+</defs></svg>
+<div class="app-shell">
+<aside class="sidebar">
+<a class="brand" href="./index.html" aria-label="Little Familiars home"><span class="brand-mark">✦</span><span>little<br><b>familiars</b><em>A LITTLE WORLD OF YOUR OWN</em></span></a>
+<div class="nav-label">YOUR SANCTUARY</div>
+<nav aria-label="Main navigation">
+<button class="nav-item active" data-view="room"><svg><use href="#i-home"/></svg><span>My room</span><span class="nav-dot"></span></button>
+<button class="nav-item" data-view="companions"><svg><use href="#i-paw"/></svg><span>Companions</span><small id="owned-count">3</small></button>
+<button class="nav-item" data-view="shop"><svg><use href="#i-shop"/></svg><span>Little market</span><span class="new-label">NEW</span></button>
+<button class="nav-item" id="journal-button"><svg><use href="#i-book"/></svg><span>Our story</span></button>
+</nav>
+<div class="sidebar-note"><span class="note-stars">✧ · ✦</span><h3>Small moments.<br>Something special.</h3><p>A little care goes a long way.</p><span class="hand-drawn-heart">♡</span></div>
+<div class="sidebar-bottom"><button id="help-button"><svg><use href="#i-info"/></svg> A little guidance</button><a href="../index.html">↗ Edward’s Game Studio</a><span class="version">MADE FOR THE LITTLE MOMENTS · v0.1</span></div>
+</aside>
+<div class="main-shell">
+<header class="topbar"><div class="breadcrumb"><span>Sanctuary</span><span>/</span><strong id="breadcrumb-current">My room</strong></div><div class="topbar-right"><span id="save-status" class="save-status"><i></i> Progress saved</span><button id="sound-button" class="icon-button" aria-label="Turn sound on" aria-pressed="false"><svg><use href="#i-sound"/></svg></button><span class="profile" title="Your little sanctuary">E<span>✦</span></span></div></header>
+<main>
+<section id="room-view" class="view">
+<div class="page-heading"><div><div class="eyebrow">A LITTLE CARE. A LIFELONG FRIEND.</div><h1>Home, sweet little home<span>.</span></h1><p>Your favorite little soul is happy you’re here.</p></div><span class="date-chip"><span>☾</span> Cozy mode, always</span></div>
+<div class="room-layout">
+<div class="room-card">
+<div class="room-top"><span class="room-name"><i></i> THE MOONLIT NOOK</span><span class="room-weather">✧ A peaceful evening</span></div>
+<div id="pet-room" class="pet-room">
+<div class="wall-arch"><div class="moon"></div><span class="star s1">✦</span><span class="star s2">·</span><span class="star s3">✧</span><div class="window-cross"></div><div class="window-sill"></div></div>
+<div class="shelf"><span class="vase"></span><span class="book b1"></span><span class="book b2"></span><span class="shelf-star">✦</span></div>
+<div class="room-plant"><span></span><span></span><span></span><div></div></div><div class="floor"></div><div class="rug"></div><div class="floor-glow"></div>
+<div class="speech-bubble" id="pet-speech">You’re here. My favorite part of the day. ♡</div>
+<button id="pet-button" class="pet-button" aria-label="Pet Mochi"><span class="pet-shadow"></span><span id="hero-pet" class="pet-art kind-1"></span></button>
+<span class="floating-spark spark-one">✧</span><span class="floating-spark spark-two">✦</span>
+<div class="room-bottom"><span><svg><use href="#i-heart"/></svg> <span id="room-mood">Feeling loved</span></span><span>Tap your familiar to say hello <span>↗</span></span></div>
+<div id="play-overlay" class="play-overlay" hidden><div class="play-instruction">Catch a little starlight <span id="play-score">0 / 5</span><button id="cancel-play" aria-label="Stop playing">×</button></div><button id="catch-star" aria-label="Catch the star">✦</button><span class="play-hint">Tap the glowing star · or focus it and press Enter</span></div>
+<div id="care-particles" class="care-particles" aria-hidden="true"></div>
+</div>
+<div class="care-area"><div class="section-heading"><h2>A little everyday love</h2><span>Every moment brings you closer</span></div><div class="care-grid">
+<button class="care-button food" data-action="food"><span class="care-icon"><svg><use href="#i-food"/></svg></span><b>Feed</b><span>A tasty little treat</span><small>1</small></button>
+<button class="care-button water" data-action="water"><span class="care-icon"><svg><use href="#i-water"/></svg></span><b>Water</b><span>A fresh sip of joy</span><small>2</small></button>
+<button class="care-button clean" data-action="clean"><span class="care-icon"><svg><use href="#i-clean"/></svg></span><b>Clean</b><span>Fresh & fluffy</span><small>3</small></button>
+<button class="care-button play" data-action="play"><span class="care-icon"><svg><use href="#i-play"/></svg></span><b>Play</b><span>Make a memory</span><small>4</small></button>
+</div></div>
+</div>
+<aside class="pet-panel"><div class="pet-panel-heading"><span class="eyebrow">YOUR LITTLE FAMILIAR</span><span class="tiny-spark">✧</span></div><div class="pet-title"><h2 id="pet-name">Mochi</h2><button id="rename-button" class="rename-button" aria-label="Rename your pet">✎</button><span id="stage-badge" class="stage-badge">Baby</span></div><p id="pet-description" class="pet-subtitle">Cat · A curious little soul</p>
+<div class="bond-card"><div><svg><use href="#i-heart"/></svg><span>Your bond</span><b id="bond-value">0 / 100</b></div><div class="meter"><span id="bond-bar"></span></div><p id="bond-caption">The beginning of something lovely.</p></div>
+<div class="needs-heading"><h3>The little things</h3><span id="needs-note">Made better by you</span></div>
+<div id="needs-list" class="needs-list"></div>
+<div class="growth-block"><div class="growth-label"><span><svg><use href="#i-leaf"/></svg> Growing together</span><b id="growth-value">0 / 60</b></div><div class="meter"><span id="growth-bar"></span></div><div class="growth-stages"><span id="growth-from">Baby</span><span id="growth-to">Youngster ✧</span></div><p id="growth-tip">Good care helps little paws take big steps.</p></div>
+<div class="balanced-care"><span>✦</span><p><b>A little of everything</b><span id="round-text">Try all 4 care activities for a growth bonus.</span></p><span id="round-count">0/4</span></div>
+</aside>
+</div>
+<section class="friends-section"><div class="section-heading"><div><h2>A friend for every kind of heart <span>♡</span></h2><p>Three little beginnings. A world of possibilities.</p></div><button class="text-button" data-view="companions">Meet your companions <svg><use href="#i-arrow"/></svg></button></div><div id="starter-cards" class="starter-cards"></div></section>
+</section>
+<section id="companions-view" class="view" hidden><div class="page-heading"><div><div class="eyebrow">LITTLE PAWS. BIG PERSONALITIES.</div><h1>Your circle of little souls<span>.</span></h1><p>Every companion has a story. Help theirs grow.</p></div><button class="primary-button" data-view="shop">Visit the little market <span>↗</span></button></div><div class="collection-note"><svg><use href="#i-heart"/></svg> All three starter companions are yours. Each one keeps their own growth, care, and bond.</div><div id="collection-grid" class="pet-grid"></div></section>
+<section id="shop-view" class="view" hidden><div class="page-heading"><div><div class="eyebrow">A LITTLE SOMETHING SPECIAL</div><h1>The little market<span>.</span></h1><p>Make room for a little more magic.</p></div><span class="demo-pill">✧ Prototype shop</span></div><div class="shop-notice"><svg><use href="#i-info"/></svg><p><b>Just a little make-believe.</b> Purchases in this prototype are simulated. No money is charged. Unlocks stay in this browser.</p></div><div class="shop-banner"><div><span class="eyebrow">NEW FRIENDS, SAME BIG HEART</span><h2>Some bonds are<br>a little more magical.</h2><p>Meet the newest souls in our little world.</p></div><div class="banner-art pet-art kind-5"></div><span class="banner-spark">✧</span></div><div class="shop-filter"><button class="filter active" data-filter="all">All familiars</button><button class="filter" data-filter="special">Magical friends</button><button class="filter" data-filter="variation">Coat variations</button></div><div id="shop-grid" class="pet-grid"></div></section>
+<footer class="main-footer"><span>Made of small moments & a little magic.</span><span>♡ Be kind. Grow together.</span></footer>
+</main></div></div>
+<div id="toast" role="status" class="toast" hidden></div>
+<dialog id="modal"><button class="dialog-close" aria-label="Close dialog">×</button><div id="modal-content"></div></dialog>
+<script type="module" src="./app.mjs"></script>
+</body></html>
