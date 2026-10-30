@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#285d66">
+  <title>The Lantern Beyond the Tide — Brindle Harbor</title>
+  <meta name="description" content="A miniature island adventure. Meet Mira, gather the scattered light, and venture into the Rootbound Garden.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='18' width='64' height='64' fill='%23265b5b'/%3E%3Cpath d='M32 10 41 27 54 32 41 37 32 54 23 37 10 32 23 27Z' fill='%23fce3a0'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main id="game" aria-label="The Lantern Beyond the Tide game">
+    <canvas id="world" aria-label="Three-dimensional island. Use WASD or arrow keys to move, E to interact, Space to swing your sword, and Shift to roll."></canvas>
+    <div class="screen-grain" aria-hidden="true"></div>
+    <div id="loading"><div class="sun-mark">✦</div><p>A little light is finding its way…</p></div>
+    <header id="hud" class="hidden">
+      <div class="vitals"><div id="hearts" aria-label="5 of 5 hearts">♥ ♥ ♥ ♥ ♥</div><div class="pocket"><span class="shell-symbol">◈</span><span id="shell-count">0</span><span class="pocket-divider"></span><span class="tiny-lantern">✧</span><span id="spark-count">0 / 3</span></div></div>
+      <div class="hud-actions"><button id="sound" class="round-button" aria-label="Turn sound on" title="Sound">♫<span class="off-dot"></span></button><button id="journal-button" class="round-button" aria-label="Open journal" title="Journal (Q)">▤</button><button id="pause-button" class="round-button" aria-label="Pause game" title="Pause (Escape)">Ⅱ</button></div>
+    </header>
+    <aside id="quest" class="hidden"><span class="quest-kicker">A LITTLE LIGHT</span><p id="quest-text">Find Mira beside the harbor.</p><div class="quest-line"><i></i></div></aside>
+    <div id="location" class="hidden"><span class="location-rule"></span><span id="region-label">VESPER ISLAND</span><strong id="location-name">Brindle Harbor</strong><span id="location-subtitle">Where the sunset stays.</span></div>
+    <div id="keyboard-help" class="hidden"><span><kbd>W A S D</kbd> Move</span><span><kbd>E</kbd> Interact</span><span><kbd>SPACE</kbd> Sword</span><span><kbd>SHIFT</kbd> Roll</span></div>
+    <button id="prompt" class="hidden"><kbd>E</kbd><span>Talk to Mira</span></button>
+    <div id="toast" role="status" class="hidden"></div>
+    <div id="title-screen" class="hidden">
+      <div class="title-top"><a href="../index.html">← THE GAME STUDIO</a><span>AN ISLAND BETWEEN MOMENTS</span></div>
+      <div class="title-content"><div class="title-ornament"><span></span>✦<span></span></div><p class="eyebrow">A VESPER ISLAND ADVENTURE</p><h1>The Lantern<br><em>Beyond the Tide</em></h1><p class="title-description">Somewhere beyond the ordinary sea,<br>an island is waiting for its first morning.</p><button id="begin" class="primary-button">Begin your journey <span>→</span></button><button id="continue" class="text-button hidden">Continue your journey</button><p class="title-footnote">BRINDLE HARBOR · PLAYABLE VISUAL PROTOTYPE</p></div>
+      <div class="title-bottom"><span>✧ A small world. A little wonder.</span><span>HEADPHONES RECOMMENDED</span></div>
+    </div>
+    <section id="dialogue" class="hidden" aria-label="Conversation"><div class="portrait" id="portrait" aria-hidden="true">M</div><div class="dialogue-content"><span id="speaker">MIRA</span><p id="dialogue-text"></p><button id="dialogue-next">Continue <kbd>E</kbd></button></div></section>
+    <div id="modal-shade" class="hidden"><section id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><span class="eyebrow" id="modal-eyebrow">TAKE A BREATH</span><h2 id="modal-title">The tide can wait.</h2><div id="modal-body"></div><div id="modal-actions"></div><a class="studio-link" href="../index.html">← Back to the game studio</a></section></div>
+    <div id="touch" class="hidden"><div class="dpad"><button data-move="up" aria-label="Move up">⌃</button><button data-move="left" aria-label="Move left">‹</button><button data-move="right" aria-label="Move right">›</button><button data-move="down" aria-label="Move down">⌄</button></div><div class="touch-actions"><button id="touch-roll" aria-label="Roll">↝</button><button id="touch-sword" aria-label="Swing sword">⚔</button><button id="touch-interact" aria-label="Interact">E</button></div></div>
+    <div id="error" class="hidden" role="alert"><h2>This little world needs WebGL 2.</h2><p>Please enable hardware acceleration or open the prototype in a recent Safari, Chrome, Edge, or Firefox browser.</p><a href="../index.html">Return to the studio</a></div>
+  </main>
+  <script type="module" src="./main.mjs"></script>
+</body>
+</html>
